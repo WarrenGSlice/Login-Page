@@ -1,0 +1,18 @@
+<?php include('registerHandler.php'); ?>
+<html>
+	<head>
+		<title>Registration Form</title>
+	</head>
+	<body>
+		<form method="POST" action="<?php echo htmlspecialchars($SERVER["PHP_SELF"]);?>
+
+			<label for="FIRST_NAME">First Name:</label> 
+			<input type="text" name="FIRST_NAME" id="FIRST_NAME" required><span class="error">* <?php echo $FIRST_NAME_Err;?></span><br><br>
+			
+			<label for="LastName">Last Name: </label>
+			<input type="text" name="LAST_NAME" id="LAST_NAME" required><span class="error">* <?php echo $LAST_NAME_Err;?></span><br><br>
+			
+			<button type= "submit" name="btnsignup" class="bnt btn-default">Submit</button>
+		</form>
+	</body>
+</html>
